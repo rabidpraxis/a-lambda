@@ -14,7 +14,7 @@ Metadata:
     Author: Kevin Webster
     SpdxLicenseId: Apache-2.0
     LicenseUrl: LICENSE.txt
-    ReadmeUrl: README.mdown
+    ReadmeUrl: README.md
     Labels: ['tests']
     HomePageUrl: https://github.com/rabidpraxis/a-lambda
     SemanticVersion: !Ref SemanticVersion
