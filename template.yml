@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: It's a Lambda!
+
+Parameters:
+  Environment:
+    Type: String
+    Default: dev
+
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: a-lambda
+    Description: Just a Lambda (maybe)
+    Author: Kevin Webster
+    SpdxLicenseId: Apache-2.0
+    LicenseUrl: LICENSE.txt
+    ReadmeUrl: README.mdown
+    Labels: ['tests']
+    HomePageUrl: https://github.com/rabidpraxis/a-lambda
+    SemanticVersion: !Ref SemanticVersion
+    SourceCodeUrl: https://github.com/rabidpraxis/a-lambda
+
+Resources:
+  ConnectLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: function
+      MemorySize: 128
+      Handler: lambda
+      FunctionName: "a-lambda"
+      Runtime: go1.x
